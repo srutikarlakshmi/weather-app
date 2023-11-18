@@ -2,8 +2,14 @@ import React, { useState } from "react";
 import axios from "axios";
 
 function App() {
-  // const url = `https://api.openweathermap.org/data/2.5/weather?q=bangalore&appid=026127dbef7d29041239c96211e6bd04
+  
+  const [data, setData] = useState({})
+  const [location, setLocation] = useState('')
+
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=026127dbef7d29041239c96211e6bd04
   // `
+
+  
 
   return (
     <div className="App">
@@ -16,17 +22,22 @@ function App() {
             <h1>25°C </h1>
           </div>
           <div className="description">
-            <p>Cloudy with a chance of rain.</p>
+            <p>Cloudy</p>
           </div>
         </div>
         <div className="bottom">
           <div className="feels">
-            <p>Feels like 30°C</p>
+            <p className="bold">30°C</p>
+            <p>Feels Like</p>
           </div>
           <div className="humidity">
-            <p>Humidity: 68%</p>
+            <p className="bold">68%</p>
+            <p>Humidity</p>
           </div>
-          <div className="wind">12 MPH</div>
+          <div className="wind">
+            <p className="bold">12 MPH</p>
+            <p>Wind Speed</p>
+          </div>
         </div>
       </div>
     </div>
