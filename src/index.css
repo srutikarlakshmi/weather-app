@@ -141,7 +141,33 @@ h1 {
   top: 0;
   left: 0;
   z-index: -1;
+  animation: change 80s infinite ease-in-out;
 }
+
+@keyframes change{
+  0%{
+    background-image: url(./assets/spring.jpg);
+  }
+  20%{
+    background-image: url(./assets/calm.jpg);
+  }
+  40%{
+    background-image: url(./assets/cloudy.jpg);
+  }
+  55%{
+    background-image: url(./assets/dawn.jpg);
+  }
+  77%{
+    background-image: url(./assets/gloomy.jpg);
+  }
+  89%{
+    background-image: url(./assets/beauty.jpg);
+  }
+  100%{
+    background-image: url(./assets/sunny.jpg);
+  }
+}
+
 
 .app .search {
   text-align: center;
